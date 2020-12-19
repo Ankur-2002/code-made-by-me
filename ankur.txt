@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+itn main(){
+int a;
+cin>>a;
+
+int *arr=new int[a];
+int **ar=arr;
+
+for(int i=0; i<a; i++){
+cin>>*arr;
+arr++;
+}
+
+
+}

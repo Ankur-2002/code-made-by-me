@@ -1,0 +1,67 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+int arr[5]={1,2,3,2,4};
+
+
+/*
+HOW TO FIND DUPLICATE NUMBER !! (INDEX MINUS APPROCH );
+int s=0;
+while(true){
+
+if(arr[s]<0)
+cout<<s;
+
+else 
+{
+arr[s]*=-1;
+s=abs(arr[s]);
+}
+
+}
+*/
+/*
+	MAP APPROCH !!
+
+map<int,int>v;
+
+for(auto i:arr){
+v[i]++;
+}
+
+for(int i=0; i<5; i++){
+if(v[i]!=1)
+cout<<i;
+}
+
+*/	
+
+TOTAIS AND HURN METHOD !!
+
+int fast ,slow;
+
+fast=slow=arr[0];
+
+do{
+
+fast=arr[arr[fast]];
+slow=arr[slow];
+
+}while(fast!=slow);
+
+fast=arr[0];
+
+while(fast!=slow){
+fast=arr[fast];
+slow=arr[slow];
+}
+cout<<slow;	//COUT<<FAST AND COUT<<SLOW (BOTH ARE SAME BECAUSE THEY PRESENT IN SAME LOCATION!!);
+
+}
+
+
+
+
+
+
