@@ -1,0 +1,1 @@
+A block weighing 250N is pushed along a surface. If it takes 50N to get the block moving and 30N to keep the block moving at a constant velocity, what are the coefficients of static friction and kinetic friction

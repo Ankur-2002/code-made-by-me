@@ -1,0 +1,29 @@
+//K M P (algorithm). is used for searching algorithm for string
+ 
+string pattern = "GEEKS";
+string text = "GEEKSFORGEEKS";
+
+first we check pattern string , in pattern string have a same prefix and suffix of not;
+lps;
+void prefix(string pattern,int *lps)
+{
+	int i=1,j=0;
+	// first index is always null.
+	lps[0] = 0;
+
+	while(i < pattern.length())
+	{
+		if(pattern[i] == pattern[j])
+		{
+			j++;
+			lps[i] = j;
+			i++;
+		}	
+		else{
+		if(j==0)
+		i++;
+		else
+		j = lps[j-1];
+		}
+	}
+}// check the longest common prefix and suffex in this code.

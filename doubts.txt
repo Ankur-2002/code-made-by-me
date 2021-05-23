@@ -1,0 +1,7 @@
+if(sizeof(double) > -1)
+printf(“M”);
+
+
+
+
+

@@ -3,36 +3,39 @@ using namespace std;
 
 int main(){
 
-int arr[3][3] = {{1,2,3},{5,6,7},{9,10,11},{13,14,15}};
+int arr[3][5] = {{6, 6 ,2, 28, 2 },{12, 26, 3 ,28 ,7} ,{22 ,25 ,3, 4 ,23}};
 
 
-int first_row = 0;
-int last_row = 3;
-int first_col = 0;
-int last_col = 3;
+ int firstrow=0,lastrow=3-1,firstcol=0,lastcol=5-1;
+        //vector<int>ans;
+        
+        while((firstrow<=lastrow) && (firstcol<=lastcol))
+        {
+            for(int i=firstrow; i<=lastcol; i++)
+		cout<<arr[firstrow][i]<<" ";
+            //ans.push_back(m[firstrow][i]);
+            cout<<"bs!";
+            for(int j=firstrow+1; j<=lastrow; j++)
+		cout<<arr[j][lastcol]<<" ";           
+// ans.push_back(m[j][lastcol]);
+            cout<<"bs!";
+            
+		if(firstrow!=lastrow)
+            for(int k=lastcol-1; k>firstcol; k--)
+        	cout<<arr[lastrow][k]<<" ";    
+	//ans.push_back(m[lastrow][k]);
+            cout<<"bs!";
+            for(int l=lastrow; l>=firstrow+1; l--)
+        	cout<<arr[l][firstcol]<<" ";    
+	//ans.push_back(m[l][firstcol]);
+            cout<<"katam!";
+            firstrow++;
+            lastrow--;
+            firstcol++;
+            lastcol--;
+     cout<<"\n";
+        }
 
 
-while(first_row < last_row && first_col < last_col){
-
-for(int i=first_col; i<last_col; i++){				
-cout<<arr[first_row][i]<<"\n";			//FIRST COLUMN TO LAST COLUMN 
-}
-
-for(int i=first_row+1; i<last_col; i++)
-cout<<arr[i][last_col-1]<<"\n";			//2 ROW TO LAST COLUMN
-
-for(int i=last_col-2; i>=first_col; i--)
-cout<<arr[last_row-1][i]<<"\n";
-						//THIS RUN BACK 
-for(int i=last_row-2; i>=first_row+1; i--)
-cout<<arr[i][first_col]<<"\n";
-
-first_row++;
-last_row--;
-first_col++;
-last_col--;
-
-
-}
 
 }

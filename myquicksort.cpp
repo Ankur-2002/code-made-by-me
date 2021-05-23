@@ -6,6 +6,7 @@ int partion(int *arr,int first , int last){
 
 int pivot=arr[last];
 int j=first;
+
 for(int i=first; i<last; i++){
 if(arr[i] < pivot){
 int temp = arr[j];

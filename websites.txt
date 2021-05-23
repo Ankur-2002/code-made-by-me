@@ -1,0 +1,15 @@
+card  - roboto 
+head - center
+bmi
+select 
+line 
+validation
+roboto
+gap  -your catagory
+head-in -home-features
+single - line - green 
+program  - feature 
+heading  - remove
+hide head remove  - red line 
+image  - remove on mobile view 
+heading  - in mobile 
